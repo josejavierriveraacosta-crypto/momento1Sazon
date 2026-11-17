@@ -1,16 +1,26 @@
-# React + Vite
+# Proyecto Sazón - Momento 1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Historia de Usuario
+**Como** usuario visitante
+**Quiero** ver el catálogo de productos de Sazón dividido en tarjetas claras
+**Para** encontrar rápido el sabor que quiero y ver su precio
 
-Currently, two official plugins are available:
+**Criterios de aceptación:**
+- Ver Navbar, listado de productos y Footer
+- Cada producto muestra imagen, nombre, precio y etiqueta
+- Puedo buscar por nombre y la lista se filtra sin recargar
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Árbol de Componentes
+App
+├── Navbar
+├── Home
+│   └── ProductCard (x N)
+└── Footer
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Buenas prácticas aplicadas
+- Datos en `src/data/products.js`, no pegados en el JSX
+- Datos pasan por props: `Home` -> `ProductCard` con `product={producto}`
+- Estado local con `useState` para la lista y la búsqueda
+- Cada componente con su propio `.css`
+- Kit de marca en variables CSS en `App.css` (`:root`)
+- 3 ramas: `main`, `dev`, `feature/momento-1-componentes`
