@@ -1,15 +1,4 @@
-:root {
-  --primary: #E85D04;
-  --secondary: #370617;
-  --bg: #FFF8F0;
-  --text: #1A1A1A;
-  --radius: 12px;
-  --font: 'Poppins', sans-serif;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font);
-  margin: 0;
+.App {
+  background-color: #F4F4E8;
+  min-height: 100vh;
 }
